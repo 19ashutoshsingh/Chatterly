@@ -1,0 +1,172 @@
+.rs{
+    color: white;
+    background: #001030;
+    position: relative;
+    height: 75vh;
+    overflow-y: scroll;
+}
+.rs .menu span {
+    position: absolute;
+    max-height: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+    right: 5px;
+    top: 8px;
+}
+
+.rs .menu {
+    position: relative;
+    padding: 10px 0px;
+}
+
+.rs .menu .sub-menu {
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevents clicks */
+    transition: opacity 0.2s ease, visibility 0.2s ease; /* Smooth transition */
+    flex-direction: column;
+    position: absolute;
+    top: 30px; /* Adjust according to your layout */
+    right: 2.5px;
+    background-color: white; /* Change to suit your design */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+.rs .menu .expand-icon:hover + .sub-menu,
+.rs .menu .sub-menu:hover {
+    opacity: 1; /* Make it visible */
+    visibility: visible; /* Allow clicks */
+    pointer-events: auto; /* Allow interaction */
+}
+
+.rs .menu .sub-menu {
+    margin-right: 8px;
+}
+
+.rs .sub-menu hr {
+    border: none;
+    height: 1px;
+    background: #a4a4a4;
+    margin: 8px 0px;
+}
+
+.rs .sub-menu p {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* Add padding to the parent menu to ensure smooth transition */
+.rs .menu {
+    padding-bottom: 20px;
+}
+
+  
+.rs-profile {
+    padding-top: 15px;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+}
+  
+.rs-profile img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+  
+.rs-profile h3 {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px 0px;
+}
+  
+.rs-profile p {
+    font-size: 10px;
+    opacity: 80%;
+    font-weight: 300;
+}
+  
+.rs hr {
+    border-color: #ffffff50;
+    margin: 10px 0px;
+}
+  
+.rs-media {
+    padding: 0px 15px 5px 15px;
+    font-size: 14px;
+    max-height: 165px;
+}
+  
+.rs-media div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-height: 165px;
+    overflow-y: auto;
+}
+.rs-media .media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .rs-media .media-empty {
+    display: block;
+  }
+  
+.rs-media div img, 
+.rs-media div .file-placeholder {
+    width: 67.5px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.rs-media div .file-placeholder {
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+    gap: 2px;
+}
+  
+.rs-media div .file-placeholder a {
+    text-decoration: none;
+    color: #333;
+}
+.rs-media div .file-placeholder a:hover{
+    text-decoration: underline;
+}
+  
+.rs-media div .file-placeholder p {
+    font-size: 18px;
+}
+.no-msg {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.rs button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #077EFF;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 10px 65px;
+    border-radius: 20px;
+    cursor: pointer;
+}
